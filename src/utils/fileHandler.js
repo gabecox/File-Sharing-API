@@ -32,6 +32,6 @@ class FileHandler {
 }
 
 module.exports = {
-    fileHandler: new FileHandler(process.env.FILE_SHARING_FOLDER_PATH),
+    fileHandler: new FileHandler(process.env.FOLDER),
     FileHandler,
 };
