@@ -41,6 +41,10 @@ const getFile = async (req, res) => {
         if (mimeType) {
             res.setHeader("Content-Type", mimeType);
         }
+        res.setHeader(
+            "Content-disposition",
+            `attachment; filename=${originalName}`
+        );
 
         stream.pipe(res);
     } else {
